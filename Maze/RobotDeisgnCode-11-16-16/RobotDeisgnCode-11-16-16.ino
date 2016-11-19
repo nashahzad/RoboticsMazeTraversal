@@ -99,7 +99,7 @@ long duration1, inches1, cm1, duration2, inches2, cm2, duration3, inches3, cm3;
   Serial.println();
   
   delay(15);
-  if(cm2 <= 3){
+  if(cm2 <= 3 && cm2 > 0){
     reverse(375);
   }
 
@@ -127,29 +127,29 @@ long duration1, inches1, cm1, duration2, inches2, cm2, duration3, inches3, cm3;
     delay(250); 
     //STABILIZATION THINGY STUFF I DON'T EVEN KNOW ANYMORE
 //  FUDGE MUFFINS MANG
-if(cm1 < 5 && cm2 < 5){
-  stopMotors();
-  turnLeft(165);
-  stopMotors();
-  forward();
-} else if(cm3 < 5 && cm2 < 5){
-  stopMotors();
-  turnRight(190);
-  stopMotors();
-  forward();
-}
-
-if(cm1 - cm3 > 0){
-  stopMotors();
-  turnRight(120);
-  stopMotors();
+//if(cm1 < 5 && cm2 < 5){
+//  stopMotors();
+//  turnLeft(165);
+//  stopMotors();
 //  forward();
-} else{
-  stopMotors();
-  turnLeft(120);
-  stopMotors();
+//} else if(cm3 < 5 && cm2 < 5){
+//  stopMotors();
+//  turnRight(190);
+//  stopMotors();
 //  forward();
-}
+//}
+//
+//if(cm1 - cm3 > 0){
+////  stopMotors();
+//  turnRight(120);
+////  stopMotors();
+////  forward();
+//} else{
+////  stopMotors();
+//  turnLeft(120);
+////  stopMotors();
+////  forward();
+//}
 }
 
 
