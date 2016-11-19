@@ -107,7 +107,7 @@ long duration1, inches1, cm1, duration2, inches2, cm2, duration3, inches3, cm3;
   //IF SPACE OPEN ON RIGHT TURN RIGHT OTHERWISE CONTINUE FORWARD
   //IF LESS THAN 20 CENTIMETERS IN FRONT SENSOR
   //TURN LEFT 90 DEGREES
-  if(cm1 > 20){
+  if(cm1 > 20 || cm1 == 0){
     forward();
     delay(200);
     stopMotors();
@@ -168,7 +168,7 @@ void turnRight(){
   analogWrite(Input4, sp);
   delay(400);
   forward();
-  delay(1100);
+  delay(800);
 }
 
 void turnRight(int num){

@@ -22,11 +22,11 @@ Windows open up Git Bash terminal, Mac OS open up terminal. Make sure to be fami
 
 If you have SSH keys set up already then just use SSH URL and clone repository into directory you want it to be in on your local machine.
 
-- **git clone git@github.com:nashahzad/FirefighterRobot.git** (This will clone entire repository into your current working directory)
+- **git clone git@github.com:nashahzad/RoboticsMazeTraversal.git** (This will clone entire repository into your current working directory)
 
 Otherwise if you do not have SSH keys set up or have no idea what that is that is fine. Just make sure to use HTTPS URL for repository to clone it.
 
-- **git clone https://github.com/nashahzad/FirefighterRobot.git**
+- **git clone https://github.com/nashahzad/RoboticsMazeTraversal.git**
 
 Once you clone repository and are part of group add your name to list of group members by opening up this README.md in a text editor.
 
