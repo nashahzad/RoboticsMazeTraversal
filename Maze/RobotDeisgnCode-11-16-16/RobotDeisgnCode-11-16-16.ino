@@ -99,7 +99,7 @@ long duration1, inches1, cm1, duration2, inches2, cm2, duration3, inches3, cm3;
   Serial.println();
   
   delay(15);
-  if(cm2 <= 3 && cm2 > 0){
+  if(cm2 <= 5 && cm2 > 0){
     reverse(375);
   }
 
@@ -114,7 +114,7 @@ long duration1, inches1, cm1, duration2, inches2, cm2, duration3, inches3, cm3;
     turnRight();
     stopMotors();
   }
-  else if (cm2 < 15) 
+  else if (cm2 < 20 && cm2 > 0) 
     {
       stopMotors();
       turnLeft();
@@ -124,7 +124,7 @@ long duration1, inches1, cm1, duration2, inches2, cm2, duration3, inches3, cm3;
     {
       forward();
     }
-    delay(250); 
+//    delay(250); 
     //STABILIZATION THINGY STUFF I DON'T EVEN KNOW ANYMORE
 //  FUDGE MUFFINS MANG
 //if(cm1 < 5 && cm2 < 5){
@@ -155,20 +155,20 @@ long duration1, inches1, cm1, duration2, inches2, cm2, duration3, inches3, cm3;
 
 void forward(){
   analogWrite(Input1, 0);
-  analogWrite(Input2, 200);
+  analogWrite(Input2, sp);
   analogWrite(Input3, 0);
-  analogWrite(Input4, 225);
+  analogWrite(Input4, 245);
 }
 
 void turnRight(){
-  delay(400);
+//  delay(400);
   analogWrite(Input1, spL);
   analogWrite(Input2, 0);
   analogWrite(Input3, 0);
   analogWrite(Input4, sp);
   delay(400);
   forward();
-  delay(1000);
+  delay(1100);
 }
 
 void turnRight(int num){
@@ -187,7 +187,7 @@ void turnLeft(){
   analogWrite(Input2, spL);
   analogWrite(Input3, sp);
   analogWrite(Input4, 0);
-  delay(400);
+  delay(360);
 //  forward();
 }
 
