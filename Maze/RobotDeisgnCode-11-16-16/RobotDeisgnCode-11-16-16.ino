@@ -77,25 +77,25 @@ long duration1, inches1, cm1, duration2, inches2, cm2, duration3, inches3, cm3;
   Serial.print(cm2);
   Serial.print("cm2, ");
   
-      //Activating trigger, sending initial pulse
-  digitalWrite(trig3, LOW);
-  delayMicroseconds(10);
-  digitalWrite(trig3, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trig3, LOW);
-
-  //Activating echo, awaiting response
-  pinMode(echo3, INPUT);
-  duration3 = pulseIn(echo3, HIGH);
- 
-  //Convert from time to distance
-  inches3 = microsecondsToInches(duration3);
-  cm3 = microsecondsToCentimeters(duration3);
-
-  Serial.print(inches3);
-  Serial.print("in3, ");
-  Serial.print(cm3);
-  Serial.print("cm3");
+//      //Activating trigger, sending initial pulse
+//  digitalWrite(trig3, LOW);
+//  delayMicroseconds(10);
+//  digitalWrite(trig3, HIGH);
+//  delayMicroseconds(10);
+//  digitalWrite(trig3, LOW);
+//
+//  //Activating echo, awaiting response
+//  pinMode(echo3, INPUT);
+//  duration3 = pulseIn(echo3, HIGH);
+// 
+//  //Convert from time to distance
+//  inches3 = microsecondsToInches(duration3);
+//  cm3 = microsecondsToCentimeters(duration3);
+//
+//  Serial.print(inches3);
+//  Serial.print("in3, ");
+//  Serial.print(cm3);
+//  Serial.print("cm3");
   Serial.println();
   
   delay(15);
@@ -107,9 +107,9 @@ long duration1, inches1, cm1, duration2, inches2, cm2, duration3, inches3, cm3;
   //IF SPACE OPEN ON RIGHT TURN RIGHT OTHERWISE CONTINUE FORWARD
   //IF LESS THAN 20 CENTIMETERS IN FRONT SENSOR
   //TURN LEFT 90 DEGREES
-  if(cm1 > 20 || cm1 == 0){
+  if(cm1 > 42 || cm1 == 0){
     forward();
-    delay(200);
+    delay(300);
     stopMotors();
     turnRight();
     stopMotors();
@@ -157,7 +157,7 @@ void forward(){
   analogWrite(Input1, 0);
   analogWrite(Input2, sp);
   analogWrite(Input3, 0);
-  analogWrite(Input4, 245);
+  analogWrite(Input4, 230);
 }
 
 void turnRight(){
@@ -166,7 +166,7 @@ void turnRight(){
   analogWrite(Input2, 0);
   analogWrite(Input3, 0);
   analogWrite(Input4, sp);
-  delay(400);
+  delay(360);
   forward();
   delay(800);
 }
